@@ -31,7 +31,7 @@ export default class Counter extends Component {
         return (
             <div className="counter">
                 <h1>Number: {this.state.number}</h1>
-                <button className='inc' onClick={(e) => this.decrement(e)}>substract</button>
+                <button className='inc' onClick={(e) => this.decrement(e)}>Substract</button>
                 <button className='dec' onClick={(e) => this.increment(e)}>Add</button>
                 <button className='reset' onClick={(e) => this.reset(e)}>Reset</button>
                 
