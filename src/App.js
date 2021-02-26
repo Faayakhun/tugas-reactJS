@@ -1,20 +1,26 @@
-import { useState } from 'react'
-
+import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import Counter from './components/Counter'
-import Array from './components/ListProduct'
+import ProductItem from './components/ProductItem'
+import Navbar from './components/Navbar'
 
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <Counter />
-     <br/>
-     <br/>
-     <h1>Tugas no 2</h1>
-     <Array />
+    <Router>
+    <div>
+     <Navbar />
+        <Switch>
+          <Route path="/counter">
+            <Counter />
+          </Route>
+          <Route path="/productitem">
+            <ProductItem />
+          </Route>
+        </Switch>
     </div>
+    </Router>
   );
 }
 
